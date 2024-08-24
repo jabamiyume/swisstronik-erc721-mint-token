@@ -1,21 +1,13 @@
-# Swisstronik Tesnet Techinal Task 3 (Mint a ERC-721 Token)
+# Swisstronik Testnet 2.0 (Deploy ERC-721 Token).
 
-link : [Click!](https://www.swisstronik.com/testnet2/dashboard)
-
-Feel free donate to my EVM address
-
-EVM :
-
-```bash
-0x9902C3A98Df4b240ad5496cC26F89bAb8058f4aE
-```
+Link : [Click!](https://www.swisstronik.com/testnet2/dashboard)
 
 ## Steps
 
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/Mnuralim/swisstronik-erc721-mint-token.git
+git clone https://github.com/jabamiyume/swisstronik-erc721-mint-token.git
 ```
 
 ```
@@ -33,10 +25,15 @@ npm install
 create .env file in root project
 
 ```bash
+touch .env
+```
+
+add this to your .env file
+```bash
 PRIVATE_KEY="your private key"
 ```
 
-### 4. Update Smart Contract (Skipp if you won't modify NFT name)
+### 4. Update Smart Contract
 
 - Open contracts folder
 - Open Nft.sol file
@@ -53,7 +50,7 @@ contract TestNFT is ERC721 {
 
     event NFTMinted(address recipient, uint256 tokenId);
 
-    constructor() ERC721("IzzyNFT", "IZZNFT") {}
+    constructor() ERC721("BlumNFT", "BLUM") {}
 
     function mintNFT(address recipient) public returns (uint256) {
         _currentTokenId += 1;
@@ -90,15 +87,6 @@ npm run deploy
 npm run mint
 ```
 
-### 8. Finsihed
+### Finished.
 
-- Open the deployed-adddress.ts (location in utils folder)
-- Copy the address and paste the address into testnet dashboard
-- Open the tx-hash.txt (location in utils folder)
-- Copy the address and paste the tx hash link into testnet dashboard
-- push this project to your github and paste your repository link in testnet dashboard
-
-by :
-github : [Mnuralim](https://github.com/Mnuralim)
-twitter : @Izzycracker04
-telegram : @fitriay19
+Address Testnet 0xBF30982286EBf5fFFCa748D469f79199286EAAdF
